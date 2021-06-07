@@ -21,7 +21,7 @@
 	<insert id="addProduct"		parameterType="product">
 		INSERT
 		INTO product 
-		VALUES (#{prodNo}, #{prodName}, #{prodDetail}, #{manuDate}, #{price}, #{fileName}, sysdate)
+		VALUES (seq_product_prod_no.nextval, #{prodName}, #{prodDetail}, #{manuDate}, #{price}, #{fileName}, sysdate)
 	</insert>
 
 	<select 	id="getProduct"	parameterType="_int"	resultMap="productSelectMap">
